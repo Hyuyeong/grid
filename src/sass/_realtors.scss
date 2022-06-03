@@ -2,4 +2,47 @@
   background-color: $color-secondary;
 
   grid-column: 9/-1;
+
+  @media only screen and (max-width: 50em) {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
+
+  padding: 3rem;
+  display: grid;
+  gap: 3rem;
+
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+
+  &__list {
+    display: grid;
+
+    grid-template-columns: min-content max-content;
+
+    gap: 5vh 2rem;
+    align-items: center;
+    // justify-content: center;
+
+    @media only screen and (max-width: 50em) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      grid-template-columns: min-content max-content;
+    }
+  }
+  &__img {
+    width: 7rem;
+    border-radius: 50%;
+    display: block;
+    justify-self: center;
+  }
+
+  &__sold {
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+    margin-top: -3px;
+  }
 }

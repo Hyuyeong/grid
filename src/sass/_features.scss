@@ -1,5 +1,10 @@
 .features {
   grid-column: 3/11;
+
+  @media only screen and (max-width: 62.5em) {
+    grid-column: 2/11;
+  }
+
   margin: 15rem 0;
 
   display: grid;
